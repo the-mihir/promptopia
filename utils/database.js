@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
-require('dotenv').config();
+import mongoose from 'mongoose';
+
 
 let isConnected = false;
-const uri = process.env.MONGODB_URI;
+
 
 
 export const connectToDB = async () => {
@@ -16,7 +16,7 @@ export const connectToDB = async () => {
     try {
 
 
-        await mongoose.connect(uri, {
+        await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "share_prompt",
             useNewUrlParser: true,
             useUnifiedTopology: true,
