@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import Profile from "@/components/Profile"; // Ensure this path is correct
+import Profile from "@/components/Profile";  correct
 
 const UserProfile = ({ params }) => {
     const searchParams = useSearchParams();
@@ -12,7 +12,7 @@ const UserProfile = ({ params }) => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            if (!params?.id) return; // Early return if no ID
+            if (!params?.id) return; 
 
             try {
                 const response = await fetch(`/api/users/${params.id}/posts`);

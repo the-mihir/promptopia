@@ -1,5 +1,5 @@
 "use client";
-
+import React, { Suspense } from 'react';
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -65,4 +65,12 @@ const UpdatePrompt = () => {
     );
 };
 
-export default UpdatePrompt;
+const Page = () => {
+    return (
+        <Suspense>
+            <UpdatePrompt />
+        </Suspense>
+    )
+}
+
+export default page;
